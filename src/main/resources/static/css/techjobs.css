@@ -8,10 +8,12 @@ td, th {
 
 th {
     text-align: center;
+    text-transform: uppercase;
 }
 
 td {
     vertical-align: top;
+    font-style: italic;
 }
 
 tr:nth-child(odd) {
