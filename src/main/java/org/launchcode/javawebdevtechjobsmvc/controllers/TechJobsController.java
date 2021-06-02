@@ -7,6 +7,7 @@ import java.util.HashMap;
 public class TechJobsController {
 
     private static HashMap<String, String> actionChoices = new HashMap<>();
+    private static HashMap<String, String> columnChoices = new HashMap<>();
 
     public TechJobsController() {
         actionChoices.put("search", "Search");
@@ -14,8 +15,10 @@ public class TechJobsController {
     }
 
     @ModelAttribute("actions")
-    public HashMap<String, String> getActionChoices() {
+    public static HashMap<String, String> getActionChoices() {
         return actionChoices;
     }
+
+
 
 }
