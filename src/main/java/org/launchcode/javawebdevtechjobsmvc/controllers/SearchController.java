@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import static org.launchcode.javawebdevtechjobsmvc.controllers.ListController.columnChoices;
-
 /**
  * Created by LaunchCode
  */
@@ -20,7 +18,6 @@ public class SearchController extends TechJobsController {
 
     @RequestMapping(value = "")
     public String search(Model model) {
-        model.addAttribute("columns", columnChoices);
         return "search";
     }
 
@@ -36,7 +33,6 @@ public class SearchController extends TechJobsController {
         }
 
         model.addAttribute("jobs", jobs);
-        model.addAttribute("columns", columnChoices);
         model.addAttribute("checked", searchType);
 
         return "search";
